@@ -35,7 +35,7 @@ export default function Home() {
             transition={{ duration: 1 }}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-dsccGreen/50" />
+        <div className="absolute inset-0 bg-dsccGreen/70" />
         <motion.div
           className="relative z-10 text-center px-4"
           initial={{ opacity: 0, y: -20 }}
