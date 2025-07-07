@@ -5,6 +5,7 @@ import { FaArrowRight } from 'react-icons/fa'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
 import { useState, useEffect } from 'react'
+import { db } from '../lib/firebase'
 
 export default function Page(){
   const [customProjects, setCustomProjects] = useState([])
@@ -12,6 +13,17 @@ export default function Page(){
   useEffect(() => {
     const stored = localStorage.getItem('customProjects')
     if (stored) setCustomProjects(JSON.parse(stored))
+    const fetchProjects = async () => {
+      try {
+        const { getDocs, collection } = await import('firebase/firestore')
+        const snap = await getDocs(collection(db, 'projects'))
+        const firebaseProjects = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+        setCustomProjects(prev => [...prev, ...firebaseProjects])
+      } catch (err) {
+        // ignore if firestore unavailable
+      }
+    }
+    fetchProjects()
   }, [])
 
   const allProjects = [...projects, ...customProjects]
