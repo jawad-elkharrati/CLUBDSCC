@@ -14,28 +14,15 @@ import {
   FaBullseye,
   FaHistory,
   FaArrowRight,
-<<<<<<< HEAD
   FaCheckCircle,
-  FaAddressBook,
-  FaAccessibleIcon,
-  FaGofore,
-  FaGift,
-  FaGifts,
   FaObjectGroup
-=======
-  FaCheckCircle
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
 } from 'react-icons/fa'
 
 export default function Page() {
   return (
     <Layout title="À propos">
       {/* Hero */}
-<<<<<<< HEAD
       <section className="relative w-full h-96 md:h-[110vh] overflow-hidden flex items-center justify-center text-white">
-=======
-      <section className="relative w-full h-64 md:h-[400px] overflow-hidden flex items-center justify-center text-white">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
         <div
           className="absolute inset-0 bg-cover bg-center opacity-80"
           style={{ backgroundImage: 'url(/1.jpg)' }}
@@ -59,7 +46,6 @@ export default function Page() {
         </div>
       </AnimatedSection>
 
-<<<<<<< HEAD
       {/* Mission & Vision */}
       <AnimatedSection className="py-20 bg-lightGray" direction="left">
         <div className="container mx-auto space-y-24 max-w-5xl">
@@ -110,31 +96,11 @@ export default function Page() {
         </div>
       </AnimatedSection>
 
-
       {/* Trust */}
       <AnimatedSection className="py-20 bg-white" direction="right">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-8">Ils nous font confiance</h2>
           <div className="overflow-hidden h-40">
-=======
-      {/* Values */}
-      <AnimatedSection className="py-20 bg-lightGray" direction="left">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Nos valeurs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Objective icon={FaLightbulb} title="Innovation" />
-            <Objective icon={FaRocket} title="Apprentissage" />
-            <Objective icon={FaHandshake} title="Collaboration" />
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Trust */}
-      <AnimatedSection className="py-20 bg-white" direction="right">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Ils nous font confiance</h2>
-          <div className="overflow-hidden">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
             <div className="flex flex-nowrap items-center gap-10 w-max sponsor-scroll">
               {Array.from({ length: 20 }, (_, i) => {
                 const logos = [
@@ -158,11 +124,6 @@ export default function Page() {
         </div>
       </AnimatedSection>
 
-<<<<<<< HEAD
-      {/* History */}
-      <AnimatedSection className="py-20 bg-lightGray" direction="right">
-        <div className="container mx-auto max-w-5xl">
-=======
       {/* Mission & Vision */}
       <AnimatedSection className="py-20 bg-lightGray" direction="left">
         <div className="container mx-auto px-4 space-y-24">
@@ -200,7 +161,6 @@ export default function Page() {
       {/* History */}
       <AnimatedSection className="py-20 bg-white" direction="right">
         <div className="container mx-auto px-4">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
           <h2 className="text-3xl font-bold text-center mb-6 flex items-center justify-center gap-2">
             <FaHistory /> Un peu d'histoire
           </h2>
@@ -236,7 +196,6 @@ export default function Page() {
       </AnimatedSection>
 
       {/* Activities */}
-<<<<<<< HEAD
       <AnimatedSection className="py-20 bg-white" direction="up">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Ce que nous faisons</h2>
@@ -250,21 +209,6 @@ export default function Page() {
               <span>Conférences avec des experts du domaine</span>
             </li>
             <li className="flex items-start gap-2 ">
-=======
-      <AnimatedSection className="py-20 bg-lightGray" direction="up">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Ce que nous faisons</h2>
-          <ul className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4 text-lg">
-            <li className="flex items-start gap-2">
-              <FaCheckCircle className="text-dsccOrange mt-1" />
-              <span>Organisation d'ateliers techniques et de formations</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <FaCheckCircle className="text-dsccOrange mt-1" />
-              <span>Conférences avec des experts du domaine</span>
-            </li>
-            <li className="flex items-start gap-2">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
               <FaCheckCircle className="text-dsccOrange mt-1" />
               <span>Participation à des compétitions et datathons</span>
             </li>
@@ -277,17 +221,10 @@ export default function Page() {
       </AnimatedSection>
 
       {/* Why join */}
-<<<<<<< HEAD
       <AnimatedSection className="py-20 bg-lightGray" direction="right">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Pourquoi nous rejoindre&nbsp;?</h2>
           <ul className="mx-auto grid sm:grid-cols-2 gap-10 text-lg">
-=======
-      <AnimatedSection className="py-20 bg-white" direction="right">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Pourquoi nous rejoindre&nbsp;?</h2>
-          <ul className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4 text-lg">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
             <li className="flex items-start gap-2">
               <FaCheckCircle className="text-dsccOrange mt-1" />
               <span>Développer vos compétences sur des projets concrets</span>
@@ -315,11 +252,7 @@ export default function Page() {
           Rejoignez la communauté et participez à l'aventure data science avec
           nous&nbsp;!
         </p>
-<<<<<<< HEAD
         <Link href="/join" className="bg-white text-dsccGreen hover:bg-dsccOrange hover:text-white px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
-=======
-        <Link href="/join" className="bg-white text-dsccGreen hover:bg-dsccOrange hover:text-white px-6 py-3 rounded inline-flex items-center gap-2 transition">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
           <span>Rejoindre le club</span>
           <FaArrowRight />
         </Link>
@@ -330,19 +263,11 @@ export default function Page() {
 
 function Objective({ icon: Icon, title }) {
   return (
-<<<<<<< HEAD
     <div className="flex flex-row justify-start gap-4 items-center py-6 ">
       <div className="text-dsccOrange text-4xl">
         <Icon />
       </div>
       <p className="font-semibold">{title}</p>
-=======
-    <div className="flex flex-col items-center">
-      <div className="text-dsccOrange text-5xl mb-4">
-        <Icon />
-      </div>
-      <h3 className="text-xl font-semibold">{title}</h3>
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
     </div>
   )
 }
@@ -362,17 +287,10 @@ function Timeline() {
     { year: '2023', text: 'Organisation de DatathonX', Icon: FaRocket }
   ]
   return (
-<<<<<<< HEAD
     <ol className="relative border-l-2 border-dsccGreen ml-4 my-10">
       {steps.map((s, i) => (
         <li key={i} className="mb-8 ml-6">
           <span className="absolute -left-5 flex items-center justify-center w-10 h-6 bg-dsccGreen rounded-full text-white text-xs">
-=======
-    <ol className="relative border-l-2 border-dsccGreen ml-4 my-8">
-      {steps.map((s, i) => (
-        <li key={i} className="mb-8 ml-6">
-          <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-dsccGreen rounded-full text-white text-xs">
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
             {s.year}
           </span>
           <div className="flex items-center gap-2 mt-1">
