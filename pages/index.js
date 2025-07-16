@@ -185,6 +185,7 @@ export default function Home() {
             <TeamCard img="/team/aya.jpg" name="Aya El Farssia" role="Vice‑présidente" />
             <TeamCard img="/team/hamza.jpg" name="Hanae Cherif" role="Secrétaire" />
             <TeamCard img="/team/asmaa.jpg" name="Oumaima Sahli" role="Trésorière" />
+            <TeamCard img="/team/Iyad.jpg" name="Iyad Beddidi" role="Résponsable RH" />
           </div>
           <div className="text-center mt-10">
             <Link href="/team" className="text-dsccGreen bg-white py-2 px-4 rounded-full hover:text-dsccOrange inline-flex items-center gap-1 hover:gap-3 hover:duration-75">
