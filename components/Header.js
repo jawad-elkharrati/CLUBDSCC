@@ -2,17 +2,21 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { FaEnvelope, FaBars, FaTimes } from 'react-icons/fa'
+import DarkModeToggle from './DarkModeToggle'
 
 export default function Header(){
   const [open, setOpen] = useState(false)
   return (
-    <header className="sticky top-0 z-50 shadow-md backdrop-blur bg-white/70 dark:bg-darkText/70">
-      <div className="container mx-auto flex items-center justify-between p-4 relative">
+    <header className="sticky top-5 z-50 mx-4">
+      <div className="container flex items-center justify-between px-6 relative 
+      shadow-md backdrop-blur bg-white/70 dark:bg-darkText/70 
+      max-w-5xl mx-auto rounded-full">
         <Link href="/">
           <span className="flex items-center gap-2 cursor-pointer">
             <Image src="/logopng.png" alt="DSCC logo" width={65} height={65} className="bg-transparent" />
           </span>
         </Link>
+
         <button
           className="md:hidden text-2xl"
           onClick={() => setOpen(!open)}
@@ -31,7 +35,7 @@ export default function Header(){
           <Link href="/datathonx" className="hover:text-dsccGreen transition whitespace-nowrap">DatathonX</Link>
           <Link href="/team" className="hover:text-dsccGreen transition whitespace-nowrap">Équipe</Link>
           <Link href="/resources" className="hover:text-dsccGreen transition whitespace-nowrap">Ressources</Link>
-          <Link href="/contact" className="flex items-center bg-dsccOrange text-white px-4 py-2 rounded hover:opacity-90 transition whitespace-nowrap">
+          <Link href="/contact" className="flex items-center bg-dsccOrange text-white px-4 py-2 rounded-full hover:bg-dsccGreen transition whitespace-nowrap">
             <span>Contact</span>
             <FaEnvelope className="ml-1" />
           </Link>
