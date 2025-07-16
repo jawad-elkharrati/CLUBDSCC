@@ -8,26 +8,15 @@ module.exports = {
   theme: {
     extend: {
       
-<<<<<<< HEAD
       colors: {
-=======
-colors: {
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
         dsccGreen: "#00909c",
         dsccOrange: "#E67700",
         darkText: "#222222",
         lightGray: "#F8F8F8",
-<<<<<<< HEAD
       },
-      
+
       fontFamily:{
         sans:['Sora', 'sans-serif']
-=======
-      }
-,
-      fontFamily:{
-        sans:['Inter', 'sans-serif']
->>>>>>> fb8aa15fb11f121a66b31cbd15c5f59344629462
       }
     },
   },
