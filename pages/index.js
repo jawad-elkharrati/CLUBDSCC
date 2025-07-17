@@ -314,9 +314,15 @@ function TeamCard({ img, name, role, link }) {
   )
 
   return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <motion.a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+      whileHover={{ scale: 1.05 }}
+    >
       {Card}
-    </a>
+    </motion.a>
   ) : (
     Card
   )

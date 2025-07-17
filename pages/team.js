@@ -40,7 +40,7 @@ export default function Page() {
                 <div className="text-center">
                   <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
                     <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center pointer-events-none">
                       {quotesByRole[m.role]}
                     </div>
                   </div>
@@ -49,7 +49,13 @@ export default function Page() {
                 </div>
               )
               return m.link ? (
-                <a key={m.name} href={m.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  key={m.name}
+                  href={m.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
                   {Card}
                 </a>
               ) : (
@@ -70,7 +76,7 @@ export default function Page() {
                 <div className="text-center">
                   <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
                     <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center pointer-events-none">
                       {quotesByRole[m.role]}
                     </div>
                   </div>
@@ -79,7 +85,13 @@ export default function Page() {
                 </div>
               )
               return m.link ? (
-                <a key={m.name} href={m.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  key={m.name}
+                  href={m.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
                   {Card}
                 </a>
               ) : (
