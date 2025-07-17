@@ -33,15 +33,21 @@ export default function Page() {
   }, [])
 
   const upcoming = [
-    { 
-      title: 'Atelier Python avancé', 
-      date: '15 juin 2024', 
-      location: 'Salle 101' 
+    {
+      title: 'Atelier Python avancé',
+      date: '15 juin 2024',
+      location: 'Salle 101'
     },
-    { 
-      title: 'Conférence IA éthique', 
-      date: '28 juin 2024', 
-      location: 'Amphi A' 
+    {
+      title: 'Python Lessons 2025',
+      date: 'Disponible',
+      location: 'En ligne',
+      link: '/python-lessons'
+    },
+    {
+      title: 'Conférence IA éthique',
+      date: '28 juin 2024',
+      location: 'Amphi A'
     },
     { 
       title: 'Hackathon Data4Good', 
@@ -100,16 +106,23 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Prochains rendez-vous</h2>
           <div className="space-y-6 max-w-3xl mx-auto ">
-            {allEvents.map((e, i) => (
-              <div key={i} className="p-4 bg-white rounded shadow hover:shadow-lg hover:duration-150">
-                <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <FaRegCalendarAlt className="text-dsccOrange" /> {e.title}
-                </h3>
-                <p className="text-gray-600">
-                  {e.date} – {e.location}
-                </p>
-              </div>
-            ))}
+            {allEvents.map((e, i) => {
+              const content = (
+                <div className="p-4 bg-white rounded shadow hover:shadow-lg hover:duration-150">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    <FaRegCalendarAlt className="text-dsccOrange" /> {e.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {e.date} – {e.location}
+                  </p>
+                </div>
+              )
+              return e.link ? (
+                <Link key={i} href={e.link}>{content}</Link>
+              ) : (
+                <div key={i}>{content}</div>
+              )
+            })}
           </div>
         </div>
       </AnimatedSection>
