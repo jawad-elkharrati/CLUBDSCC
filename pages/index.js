@@ -1,10 +1,10 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link';
-import Counter from '../components/Counter';
-import Layout from '../components/Layout';
-import Image from 'next/image';
+import Link from 'next/link'
+import Counter from '../components/Counter'
+import Layout from '../components/Layout'
+import Image from 'next/image'
 import {
   FaRegCalendarAlt,
   FaUserPlus,
@@ -29,31 +29,14 @@ export default function Home() {
   const [index, setIndex] = useState(0);
 
   const eventCards = [
-    {
-      img: '/cards/data%20for%20impact.png',
-      title: 'Data for Impact',
-      tag: 'Atelier',
-      desc: "Découvrir comment exploiter les données pour générer un impact positif."
-    },
+    { img: '/cards/data%20for%20impact.png', title: 'Data for Impact' },
     {
       img: '/cards/introduction%20%C3%A0%20python.png',
       title: 'Introduction à Python',
-      tag: 'Session',
-      desc: "Une initiation pratique au langage Python pour bien débuter.",
       link: '/python-lessons'
     },
-    {
-      img: '/cards/mentorship%20fridays.png',
-      title: 'Mentorship Fridays',
-      tag: 'Meetup',
-      desc: "Des rencontres hebdomadaires pour échanger avec des mentors."
-    },
-    {
-      img: '/cards/voices%20talk.png',
-      title: 'Voices Talk',
-      tag: 'Talk',
-      desc: "Des intervenants partagent leurs expériences et visions de la data."
-    }
+    { img: '/cards/mentorship%20fridays.png', title: 'Mentorship Fridays' },
+    { img: '/cards/voices%20talk.png', title: 'Voices Talk' }
   ]
 
   useEffect(() => {
@@ -169,9 +152,24 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos Événements</h2>
           <div className="masonry grid drid-cols-1 sm:grid-cols-2 gap-6">
-            {eventCards.map(evt => (
-              <EventCard key={evt.title} {...evt} />
-            ))}
+            {eventCards.map((c, i) => {
+              const img = (
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  className="w-full rounded-lg shadow hover:shadow-lg transition"
+                />
+              )
+              return c.link ? (
+                <Link key={i} href={c.link} className="masonry-item">
+                  {img}
+                </Link>
+              ) : (
+                <div key={i} className="masonry-item">
+                  {img}
+                </div>
+              )
+            })}
           </div>
           <div className="text-center mt-10">
             <Link href="/events" className="text-dsccGreen bg-white py-2 px-4 rounded-full hover:text-dsccOrange inline-flex items-center gap-1 hover:gap-3 hover:duration-75">
@@ -275,26 +273,6 @@ function Objective({ icon: Icon, title }){
   )
 }
 
-function EventCard({ img, title, tag, desc, link }){
-  const content = (
-    <div
-      className="masonry-item bg-white rounded-lg shadow hover:shadow-lg overflow-hidden hover:duration-300"
-      whileHover={{ scale: 1.03 }}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ type: 'spring', stiffness: 300 }}
-    >
-      <Image src={img} alt={title} width={400} height={250} className="w-full h-48 object-cover" />
-      <div className="p-4 space-y-1">
-        <span className="text-xs uppercase tracking-wider text-dsccOrange">{tag}</span>
-        <h4 className="text-lg font-semibold">{title}</h4>
-        {desc && <p className="text-sm text-gray-600">{desc}</p>}
-      </div>
-    </div>
-  )
-  return link ? <Link href={link}>{content}</Link> : content
-}
 
 
 function TeamCard({ img, name, role }){
