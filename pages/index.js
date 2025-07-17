@@ -284,7 +284,7 @@ function EventCard({ img, title, tag, desc }){
       viewport={{ once: true }}
       transition={{ type: 'spring', stiffness: 300 }}
     >
-      <Image src={img} alt={title} width={400} height={250} className="w-full h-48 object-cover" />
+      <Image src={img} alt={title} width={400} height={250} className="w-full h-48 object-contain" />
       <div className="p-4 space-y-1">
         <span className="text-xs uppercase tracking-wider text-dsccOrange">{tag}</span>
         <h4 className="text-lg font-semibold">{title}</h4>
