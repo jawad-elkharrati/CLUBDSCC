@@ -74,6 +74,16 @@ export default function Page() {
     '/event/Screenshot 2025-07-06 212420.png',
     '/event/Screenshot 2025-07-06 212446.png'
   ]
+  const cards = [
+    { img: '/cards/data%20for%20impact.png', title: 'Data for Impact' },
+    {
+      img: '/cards/introduction%20%C3%A0%20python.png',
+      title: 'Introduction à Python',
+      link: '/python-lessons'
+    },
+    { img: '/cards/mentorship%20fridays.png', title: 'Mentorship Fridays' },
+    { img: '/cards/voices%20talk.png', title: 'Voices Talk' }
+  ]
   return (
     <Layout title="Événements">
       {/* Hero */}
@@ -98,6 +108,33 @@ export default function Page() {
           <Stat icon={FaUsers} count={1500} label="Participants" />
           <Stat icon={FaChalkboardTeacher} count={45} label="Intervenants" />
           <Stat icon={FaCalendarCheck} count={4} label="Éditions" />
+        </div>
+      </AnimatedSection>
+
+      {/* Event Cards */}
+      <AnimatedSection className="py-20 bg-lightGray" direction="right">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">Nos Événements</h2>
+          <div className="masonry grid drid-cols-1 sm:grid-cols-2 gap-6">
+            {cards.map((c, i) => {
+              const img = (
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  className="w-full rounded-lg shadow hover:shadow-lg transition"
+                />
+              )
+              return c.link ? (
+                <Link key={i} href={c.link} className="masonry-item">
+                  {img}
+                </Link>
+              ) : (
+                <div key={i} className="masonry-item">
+                  {img}
+                </div>
+              )
+            })}
+          </div>
         </div>
       </AnimatedSection>
 
