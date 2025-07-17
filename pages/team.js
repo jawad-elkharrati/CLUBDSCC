@@ -35,10 +35,10 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Équipe Pilotage</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {pilotageTeam.map((m, idx) => (
+            {pilotageTeam.map(m => (
               <div key={m.name} className="text-center">
                 <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
-                  <img src={`/team/${idx + 1}.jpg`} alt={m.name} className="object-cover w-full h-full" />
+                  <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
                     {quotesByRole[m.role]}
                   </div>
@@ -56,10 +56,10 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Équipe Responsables</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {responsableTeam.map((m, idx) => (
+            {responsableTeam.map(m => (
               <div key={m.name} className="text-center">
                 <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
-                  <img src={`/team/${pilotageTeam.length + idx + 1}.jpg`} alt={m.name} className="object-cover w-full h-full" />
+                  <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
                     {quotesByRole[m.role]}
                   </div>
@@ -118,22 +118,22 @@ const quotesByRole = {
 }
 
 const pilotageTeam = [
-  { name: 'Jawad Elkharrati', role: 'Président' },
-  { name: 'Aya El Farssia', role: 'Vice-Présidente' },
-  { name: 'Hanae Cherif', role: 'Secrétaire' },
-  { name: 'Oumaima Sahli', role: 'Trésorière' },
-  { name: 'Iyad Beddidi', role: 'Responsable RH' },
+  { name: 'Jawad Elkharrati', role: 'Président', img: 'jawad.JPG' },
+  { name: 'Aya El Farssia', role: 'Vice-Présidente', img: 'aya.jpeg' },
+  { name: 'Hanae Cherif', role: 'Secrétaire', img: 'hanae.jpg' },
+  { name: 'Oumaima Sahli', role: 'Trésorière', img: 'oumaima.jpeg' },
+  { name: 'Iyad Beddidi', role: 'Responsable RH', img: 'iyad.jpeg' },
 ]
 
 const responsableTeam = [
-  { name: 'El Wazani Mohamed', role: 'Responsable Design' },
-  { name: 'Houciene Benhaddou', role: 'Responsable Maison de Science' },
-  { name: 'Safae Azizi', role: 'Responsable Média' },
-  { name: 'Jinane Ait Elabd', role: 'Responsable Montage' },
-  { name: 'Mostafa Alaoui', role: 'Responsable Logistique' },
-  { name: 'Amine Chakri', role: 'Responsable Compétition' },
-  { name: 'EL MOUSSAOUI Oussama', role: 'Responsable Journée' },
-  { name: 'Badreddine Chihab', role: 'Responsable Sponsoring' },
-  { name: 'Wafae Zalouk', role: 'Responsable Rédaction' },
-  { name: 'Zakaria Taibi', role: 'Responsable Formation' },
+  { name: 'El Wazani Mohamed', role: 'Responsable Design', img: 'jawad.JPG' },
+  { name: 'Houciene Benhaddou', role: 'Responsable Maison de Science', img: 'houcein.jpg' },
+  { name: 'Safae Azizi', role: 'Responsable Média', img: 'safae.jpeg' },
+  { name: 'Jinane Ait Elabd', role: 'Responsable Montage', img: 'jinane.png' },
+  { name: 'Mostafa Alaoui', role: 'Responsable Logistique', img: 'mustafa.jpg' },
+  { name: 'Amine Chakri', role: 'Responsable Compétition', img: 'amine.jpg' },
+  { name: 'EL MOUSSAOUI Oussama', role: 'Responsable Journée', img: 'oussama.jpg' },
+  { name: 'Badreddine Chihab', role: 'Responsable Sponsoring', img: 'badr.jpeg' },
+  { name: 'Wafae Zalouk', role: 'Responsable Rédaction', img: 'wafae.jpg' },
+  { name: 'Zakaria Taibi', role: 'Responsable Formation', img: 'zakaria.jpg' },
 ]
