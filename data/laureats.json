@@ -60,4 +60,35 @@
     "linkedin": "https://www.linkedin.com/in/hanae-lahbouchi-51103419a/",
     "img": "/laureat/test"
   }
+  ,
+  {
+    "name": "Kamal Lazhar",
+    "role": "Data Engineer at Stellantis",
+    "linkedin": "https://www.linkedin.com/in/kamal-lazhar-2414291a6/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Jouhayna Achargui",
+    "role": "Cloud Engineer @Capgemini | DevOps | Azure Certified | GCP Certified",
+    "linkedin": "https://www.linkedin.com/in/jouhayna-achargui-b18687202/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Hanifa Elaissaoui",
+    "role": "Ingénieur d'état en Data Science et Cloud Computing",
+    "linkedin": "https://www.linkedin.com/in/hanifa-elaissaoui-b443b7193/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Anouar ASSAKALI",
+    "role": "Ingénieur Data Scientist | Ministère de l'Économie et des Finances | Direction Générale des Impôts.",
+    "linkedin": "https://www.linkedin.com/in/assakali-anouar/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Amine Saihi",
+    "role": "AI/ML & NLP at Archipel Cognitive",
+    "linkedin": "https://www.linkedin.com/in/amine-saihi/",
+    "img": "/laureat/test"
+  }
 ]

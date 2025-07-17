@@ -9,6 +9,9 @@ import CardSlider from '../components/CardSlider'
 export default function Page() {
   const [drives, setDrives] = useState([])
   const [laureats, setLaureats] = useState([])
+  const mid = Math.ceil(laureats.length / 2)
+  const firstHalf = laureats.slice(0, mid)
+  const secondHalf = laureats.slice(mid)
 
   useEffect(() => {
     fetch('/api/drives')
@@ -84,7 +87,12 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos lauréats</h2>
           <CardSlider>
-            {laureats.map((l, i) => (
+            {firstHalf.map((l, i) => (
+              <LaureatCard key={i} {...l} />
+            ))}
+          </CardSlider>
+          <CardSlider>
+            {secondHalf.map((l, i) => (
               <LaureatCard key={i} {...l} />
             ))}
           </CardSlider>

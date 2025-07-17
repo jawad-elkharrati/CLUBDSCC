@@ -23,7 +23,7 @@ body {
 }
 
   .slide-right {
-    animation: slideRight 40s linear infinite;
+    animation: slideRight 30s linear infinite;
   }
 
 @keyframes slideLeft {
@@ -32,12 +32,12 @@ body {
 }
 
   .slide-left {
-    animation: slideLeft 40s linear infinite;
+    animation: slideLeft 30s linear infinite;
   }
 
   /* Faster scrolling for sponsor logos */
   .sponsor-scroll {
-    animation: slideLeft 40s linear infinite;
+    animation: slideLeft 30s linear infinite;
   }
 
 @layer utilities {
