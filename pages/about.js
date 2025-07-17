@@ -121,39 +121,6 @@ export default function Page() {
         </div>
       </AnimatedSection>
 
-      {/* Mission & Vision */}
-      <AnimatedSection className="py-20 bg-lightGray" direction="left">
-        <div className="container mx-auto px-4 space-y-24">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <Image src="/1.jpg" alt="mission" width={600} height={400} className="rounded-lg shadow" />
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center md:justify-start gap-2">
-                <FaBullseye /> Notre mission
-              </h2>
-              <p className="max-w-3xl mx-auto md:mx-0 text-lg">
-                Promouvoir l'apprentissage de la science des données et favoriser
-                une culture de partage au sein de l'ENSA. Nous croyons que la
-                collaboration permet à chacun de développer son potentiel.
-              </p>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="md:order-2">
-              <Image src="/IMG-20250215-WA0007.jpg" alt="vision" width={600} height={400} className="rounded-lg shadow" />
-            </div>
-            <div className="text-center md:text-left md:order-1">
-              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center md:justify-start gap-2">
-                <FaRocket /> Notre vision
-              </h2>
-              <p className="max-w-3xl mx-auto md:mx-0 text-lg">
-                Démocratiser les outils de la data science et inspirer une
-                nouvelle génération d'innovateurs capable de résoudre les
-                défis de demain.
-              </p>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
 
       {/* History */}
       <AnimatedSection className="py-20 bg-white" direction="right">
