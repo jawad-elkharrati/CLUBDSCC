@@ -298,7 +298,7 @@ function Objective({ icon: Icon, title }){
 function TeamCard({ img, name, role, link }) {
   const Card = (
     <motion.div
-      className="bg-white dark:bg-darkText text-center shadow-lg rounded-2xl p-6 transition-shadow hover:shadow-xl"
+      className="bg-white dark:bg-darkText text-center shadow-lg rounded-2xl p-6 transition-shadow hover:shadow-xl w-56 h-64 flex flex-col items-center"
       whileHover={{ scale: 1.05 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
