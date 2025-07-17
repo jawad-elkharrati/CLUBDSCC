@@ -7,7 +7,9 @@ export default function LaureatCard({ img, name, role, linkedin }) {
         <img src={img} alt={name} className="object-cover w-full h-full" />
       </div>
       <p className="font-semibold">{name}</p>
-      {role && <p className="text-sm text-gray-500">{role}</p>}
+      {role && (
+        <p className="text-sm text-gray-500 whitespace-pre-line">{role}</p>
+      )}
       {linkedin && (
         <a
           href={linkedin}
