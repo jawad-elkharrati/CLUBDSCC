@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Counter from '../components/Counter'
 import Layout from '../components/Layout'
 import Image from 'next/image'
@@ -63,6 +64,23 @@ export default function Home() {
             transition={{ duration: 1 }}
           />
         </AnimatePresence>
+
+        {slides.length > 1 && (
+          <>
+            <button
+              onClick={() => setIndex(i => (i - 1 + slides.length) % slides.length)}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-dsccGreen rounded-full p-2"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={() => setIndex(i => (i + 1) % slides.length)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-dsccGreen rounded-full p-2"
+            >
+              <FaChevronRight />
+            </button>
+          </>
+        )}
         
         <div className="absolute inset-0 bg-dsccGreen/70" />
 

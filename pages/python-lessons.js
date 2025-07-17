@@ -162,10 +162,15 @@ def predict():
             <h2 className="text-2xl font-bold mb-2">📁 Structure conseillée</h2>
             <pre className="bg-lightGray p-4 rounded"><code>mon_projet/
 ├── data/
+│   ├── raw/
+│   └── processed/
 ├── notebooks/
-├── scripts/
-├── models/
-├── app/
+├── src/
+│   ├── scripts/
+│   ├── models/
+│   └── app/
+├── tests/
+├── docs/
 ├── requirements.txt
 └── README.md</code></pre>
           </section>

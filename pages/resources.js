@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 import LaureatCard from '../components/LaureatCard'
-import CardSlider from '../components/CardSlider'
+import Carousel from '../components/Carousel'
 
 export default function Page() {
   const [drives, setDrives] = useState([])
@@ -86,16 +86,18 @@ export default function Page() {
       <AnimatedSection id="laureats" className="py-20 bg-white" direction="left">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos lauréats</h2>
-          <CardSlider>
-            {firstHalf.map((l, i) => (
-              <LaureatCard key={i} {...l} />
-            ))}
-          </CardSlider>
-          <CardSlider>
-            {secondHalf.map((l, i) => (
-              <LaureatCard key={i} {...l} />
-            ))}
-          </CardSlider>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Carousel>
+              {firstHalf.map((l, i) => (
+                <LaureatCard key={i} {...l} />
+              ))}
+            </Carousel>
+            <Carousel>
+              {secondHalf.map((l, i) => (
+                <LaureatCard key={i} {...l} />
+              ))}
+            </Carousel>
+          </div>
         </div>
       </AnimatedSection>
 
