@@ -19,6 +19,7 @@ import {
 } from 'react-icons/fa';
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectCard from '../components/ProjectCard'
+import Carousel from '../components/Carousel'
 import { projects } from '../data/projects'
 import { extractKeyword } from '../lib/extractKeyword'
 
@@ -88,25 +89,23 @@ export default function Home() {
       <AnimatedSection id="trust" className="py-20 bg-gray-50" direction="right">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-8">Ils nous font confiance</h2>
-          <div className="overflow-x-auto pb-2 no-scrollbar cursor-grab active:cursor-grabbing">
-            <div className="flex flex-nowrap items-center gap-10 w-max">
-              {[
-                '/sponsors/1631326041576.jfif',
-                '/sponsors/49-1120_company_import.jpg',
-                '/sponsors/Assabah-logo.jpg',
-                '/sponsors/COMMUNE-OUJDA-LOGO-01.png',
-                '/sponsors/Cerhso.jpg',
-                '/sponsors/ENSA Oujda.png',
-                '/sponsors/Screenshot 2025-07-06 204840.png',
-                '/sponsors/Societe-Generale-Emploi-Recrutement.png',
-                '/sponsors/images (1).jfif',
-                '/sponsors/images.png',
-                '/sponsors/unnamed.png'
-              ].map((src, i) => (
-                <IconTrust key={i} src={src} />
-              ))}
-            </div>
-          </div>
+          <Carousel autoScroll duration={30}>
+            {[
+              '/sponsors/1631326041576.jfif',
+              '/sponsors/49-1120_company_import.jpg',
+              '/sponsors/Assabah-logo.jpg',
+              '/sponsors/COMMUNE-OUJDA-LOGO-01.png',
+              '/sponsors/Cerhso.jpg',
+              '/sponsors/ENSA Oujda.png',
+              '/sponsors/Screenshot 2025-07-06 204840.png',
+              '/sponsors/Societe-Generale-Emploi-Recrutement.png',
+              '/sponsors/images (1).jfif',
+              '/sponsors/images.png',
+              '/sponsors/unnamed.png'
+            ].map((src, i) => (
+              <IconTrust key={i} src={src} />
+            ))}
+          </Carousel>
         </div>
       </AnimatedSection>
 
@@ -138,7 +137,7 @@ export default function Home() {
                 <img
                   src={c.img}
                   alt={extractKeyword(c.title)}
-                  className="w-full rounded-lg shadow hover:shadow-lg transition"
+                  className="w-full max-w-xs mx-auto rounded-lg shadow hover:shadow-lg transition"
                 />
               )
               return c.link ? (

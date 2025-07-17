@@ -3,6 +3,7 @@ import AnimatedSection from '../components/AnimatedSection'
 import Counter from '../components/Counter'
 import Image from 'next/image'
 import ImageSlider from '../components/ImageSlider'
+import Carousel from '../components/Carousel'
 import Link from 'next/link'
 import {
   FaProjectDiagram,
@@ -100,27 +101,23 @@ export default function Page() {
       <AnimatedSection className="py-20 bg-white" direction="right">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-8">Ils nous font confiance</h2>
-          <div className="overflow-hidden h-40">
-            <div className="flex flex-nowrap items-center gap-10 w-max sponsor-scroll">
-              {Array.from({ length: 20 }, (_, i) => {
-                const logos = [
-                  '/sponsors/1631326041576.jfif',
-                  '/sponsors/49-1120_company_import.jpg',
-                  '/sponsors/Assabah-logo.jpg',
-                  '/sponsors/COMMUNE-OUJDA-LOGO-01.png',
-                  '/sponsors/Cerhso.jpg',
-                  '/sponsors/ENSA Oujda.png',
-                  '/sponsors/Screenshot 2025-07-06 204840.png',
-                  '/sponsors/Societe-Generale-Emploi-Recrutement.png',
-                  '/sponsors/images (1).jfif',
-                  '/sponsors/images.png',
-                  '/sponsors/unnamed.png'
-                ]
-                const src = logos[i % logos.length]
-                return <IconTrust key={i} src={src} />
-              })}
-            </div>
-          </div>
+          <Carousel autoScroll duration={30}>
+            {[
+              '/sponsors/1631326041576.jfif',
+              '/sponsors/49-1120_company_import.jpg',
+              '/sponsors/Assabah-logo.jpg',
+              '/sponsors/COMMUNE-OUJDA-LOGO-01.png',
+              '/sponsors/Cerhso.jpg',
+              '/sponsors/ENSA Oujda.png',
+              '/sponsors/Screenshot 2025-07-06 204840.png',
+              '/sponsors/Societe-Generale-Emploi-Recrutement.png',
+              '/sponsors/images (1).jfif',
+              '/sponsors/images.png',
+              '/sponsors/unnamed.png'
+            ].map((src, i) => (
+              <IconTrust key={i} src={src} />
+            ))}
+          </Carousel>
         </div>
       </AnimatedSection>
 
