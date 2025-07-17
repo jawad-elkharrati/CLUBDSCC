@@ -305,8 +305,8 @@ function TeamCard({ img, name, role, link }) {
       viewport={{ once: true }}
       transition={{ type: 'spring', stiffness: 100 }}
     >
-      <div className="relative w-32 h-32 mx-auto mb-4">
-        <Image src={img} alt={name} fill className="rounded-full object-cover ring-4 ring-dsccGreen" />
+      <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-dsccGreen">
+        <Image src={img} alt={name} fill className="object-cover" />
       </div>
       <h5 className="font-semibold text-lg">{name}</h5>
       <p className="text-sm text-dsccOrange">{role}</p>
