@@ -22,6 +22,7 @@ import {
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
+import { extractKeyword } from '../lib/extractKeyword'
 
 export default function Home() {
   // Slides displayed in the hero section
@@ -156,7 +157,7 @@ export default function Home() {
               const img = (
                 <img
                   src={c.img}
-                  alt={c.title}
+                  alt={extractKeyword(c.title)}
                   className="w-full rounded-lg shadow hover:shadow-lg transition"
                 />
               )
