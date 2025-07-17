@@ -28,6 +28,33 @@ export default function Home() {
   const slides = ['/1.jpg', '/2.jpg'];
   const [index, setIndex] = useState(0);
 
+  const eventCards = [
+    {
+      img: '/cards/data%20for%20impact.png',
+      title: 'Data for Impact',
+      tag: 'Atelier',
+      desc: "Découvrir comment exploiter les données pour générer un impact positif."
+    },
+    {
+      img: '/cards/introduction%20%C3%A0%20python.png',
+      title: 'Introduction à Python',
+      tag: 'Session',
+      desc: "Une initiation pratique au langage Python pour bien débuter."
+    },
+    {
+      img: '/cards/mentorship%20fridays.png',
+      title: 'Mentorship Fridays',
+      tag: 'Meetup',
+      desc: "Des rencontres hebdomadaires pour échanger avec des mentors."
+    },
+    {
+      img: '/cards/voices%20talk.png',
+      title: 'Voices Talk',
+      tag: 'Talk',
+      desc: "Des intervenants partagent leurs expériences et visions de la data."
+    }
+  ]
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex(i => (i + 1) % slides.length)
@@ -141,10 +168,9 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos Événements</h2>
           <div className="masonry grid drid-cols-1 sm:grid-cols-2 gap-6">
-            <EventCard img="/event1.jpg" title="Atelier Machine Learning" tag="Atelier" />
-            <EventCard img="/event2.jpg" title="Introduction à Python" tag="Session" />
-            <EventCard img="/event3.jpg" title="Live IA" tag="Live" />
-            <EventCard img="/event4.jpg" title="Initiation DataViz" tag="Atelier" />
+            {eventCards.map(evt => (
+              <EventCard key={evt.title} {...evt} />
+            ))}
           </div>
           <div className="text-center mt-10">
             <Link href="/events" className="text-dsccGreen bg-white py-2 px-4 rounded-full hover:text-dsccOrange inline-flex items-center gap-1 hover:gap-3 hover:duration-75">
@@ -248,7 +274,7 @@ function Objective({ icon: Icon, title }){
   )
 }
 
-function EventCard({ img, title, tag }){
+function EventCard({ img, title, tag, desc }){
   return (
     <div
       className="masonry-item bg-white rounded-lg shadow hover:shadow-lg overflow-hidden hover:duration-300"
@@ -259,9 +285,10 @@ function EventCard({ img, title, tag }){
       transition={{ type: 'spring', stiffness: 300 }}
     >
       <Image src={img} alt={title} width={400} height={250} className="w-full h-48 object-cover" />
-      <div className="p-4">
+      <div className="p-4 space-y-1">
         <span className="text-xs uppercase tracking-wider text-dsccOrange">{tag}</span>
         <h4 className="text-lg font-semibold">{title}</h4>
+        {desc && <p className="text-sm text-gray-600">{desc}</p>}
       </div>
     </div>
   )
