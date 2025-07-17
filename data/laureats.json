@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "name": "Aissam Bakhtaoui",
+    "role": "Data Scientist at Tessi",
+    "linkedin": "https://www.linkedin.com/in/aissam-bakhtaoui",
+    "img": "/laureat/aissam.jfif"
+  },
+  {
+    "name": "M’hamed Issam ED-DAOU",
+    "role": "Engineer & Consultant — Data @VISEO",
+    "linkedin": "https://www.linkedin.com/in/issam-eddaou",
+    "img": "/laureat/issam.jfif"
+  },
+  {
+    "name": "Mohammed Herrag",
+    "role": "Data Analyst",
+    "linkedin": "https://www.linkedin.com/in/mohammed-herrag",
+    "img": "/laureat/mohammed.jfif"
+  }
+]
