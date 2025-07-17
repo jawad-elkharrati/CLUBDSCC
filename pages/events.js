@@ -122,7 +122,7 @@ export default function Page() {
                 <img
                   src={c.img}
                   alt={extractKeyword(c.title)}
-                  className="w-full rounded-lg shadow hover:shadow-lg transition"
+                  className="w-full max-w-xs mx-auto rounded-lg shadow hover:shadow-lg transition"
                 />
               )
               return c.link ? (

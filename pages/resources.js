@@ -86,13 +86,13 @@ export default function Page() {
       <AnimatedSection id="laureats" className="py-20 bg-white" direction="left">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos lauréats</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Carousel>
+          <div className="space-y-8">
+            <Carousel autoScroll duration={30}>
               {firstHalf.map((l, i) => (
                 <LaureatCard key={i} {...l} />
               ))}
             </Carousel>
-            <Carousel>
+            <Carousel autoScroll duration={30}>
               {secondHalf.map((l, i) => (
                 <LaureatCard key={i} {...l} />
               ))}
