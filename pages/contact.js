@@ -77,6 +77,14 @@ export default function Page() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
+            <a
+              href="https://www.google.com/maps/place/ENSA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dsccGreen underline inline-flex items-center gap-1 mb-4"
+            >
+              Ouvrir la carte
+            </a>
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/clubdscc/"
