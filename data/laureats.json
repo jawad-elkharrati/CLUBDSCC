@@ -17,4 +17,47 @@
     "linkedin": "https://www.linkedin.com/in/mohammed-herrag",
     "img": "/laureat/mohammed.jfif"
   }
+,
+  {
+    "name": "Lamyae Belaouchi",
+    "role": "Data Engineer",
+    "linkedin": "https://www.linkedin.com/in/lamyae-belaouchi-621603174/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Salma BITARI",
+    "role": "Data Analyst chez Cour de Justice de l’Union Européenne",
+    "linkedin": "https://www.linkedin.com/in/salma-bitari-356aa7203/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Abdelaali LAMRANI",
+    "role": "Data Consultant Intern at VISEO",
+    "linkedin": "https://www.linkedin.com/in/abdelaali-lamrani/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Mohamed Reda Benkacem",
+    "role": "Data Science & Cloud Computing Engineer",
+    "linkedin": "https://www.linkedin.com/in/benkacem/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Bensafouan Abdelhalim",
+    "role": "Data Scientist | Machine Learning Engineer @TEAMNET",
+    "linkedin": "https://www.linkedin.com/in/bensafouan-abdelhalim/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Ahmed AZIZ",
+    "role": "\ud83d\udc0d Data Engineer/Elastic Engineer @BNPParibas",
+    "linkedin": "https://www.linkedin.com/in/reyamed/",
+    "img": "/laureat/test"
+  },
+  {
+    "name": "Hanae Lahbouchi",
+    "role": "Data Engineer",
+    "linkedin": "https://www.linkedin.com/in/hanae-lahbouchi-51103419a/",
+    "img": "/laureat/test"
+  }
 ]
