@@ -5,6 +5,7 @@ import ImageSlider from '../components/ImageSlider'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { db } from '../lib/firebase'
+import { extractKeyword } from '../lib/extractKeyword'
 import {
   FaRegCalendarAlt,
   FaUsers,
@@ -120,7 +121,7 @@ export default function Page() {
               const img = (
                 <img
                   src={c.img}
-                  alt={c.title}
+                  alt={extractKeyword(c.title)}
                   className="w-full rounded-lg shadow hover:shadow-lg transition"
                 />
               )
