@@ -23,7 +23,12 @@ export default function Page(){
       <AnimatedSection className="py-20 bg-white" direction="down">
         <div className="container mx-auto px-4 text-center">
           <p className="mb-6">Tu souhaites explorer la data science avec nous ? Remplis le formulaire de contact et rejoins la communauté&nbsp;!</p>
-          <a href="/contact" className="bg-dsccOrange text-white px-6 py-3 rounded inline-flex items-center gap-2">
+          <a
+            href="https://docs.google.com/forms/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-dsccOrange text-white px-6 py-3 rounded inline-flex items-center gap-2"
+          >
             <span>Contact</span>
             <FaEnvelope />
           </a>

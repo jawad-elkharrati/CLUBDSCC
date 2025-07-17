@@ -206,11 +206,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Équipe actuelle</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 justify-items-center max-w-5xl mx-auto">
-            <TeamCard img="/team/jawad.jpg" name="Jawad Elkharrati" role="Président" />
-            <TeamCard img="/team/aya.jpg" name="Aya El Farssia" role="Vice‑présidente" />
-            <TeamCard img="/team/hamza.jpg" name="Hanae Cherif" role="Secrétaire" />
-            <TeamCard img="/team/asmaa.jpg" name="Oumaima Sahli" role="Trésorière" />
-            <TeamCard img="/team/Iyad.jpg" name="Iyad Beddidi" role="Résponsable RH" />
+            <TeamCard img="/team/jawad.JPG" name="Jawad Elkharrati" role="Président" />
+            <TeamCard img="/team/aya.jpeg" name="Aya El Farssia" role="Vice‑présidente" />
+            <TeamCard img="/team/hanae.jpg" name="Hanae Cherif" role="Secrétaire" />
+            <TeamCard img="/team/oumaima.jpeg" name="Oumaima Sahli" role="Trésorière" />
+            <TeamCard img="/team/iyad.jpeg" name="Iyad Beddidi" role="Résponsable RH" />
           </div>
           <div className="text-center mt-10">
             <Link href="/team" className="text-dsccGreen bg-white py-2 px-4 rounded-full hover:text-dsccOrange inline-flex items-center gap-1 hover:gap-3 hover:duration-75">
