@@ -1,8 +1,10 @@
 import Layout from '../components/Layout'
 import AnimatedSection from '../components/AnimatedSection'
 import Link from 'next/link'
-import { FaArrowRight, FaLinkedin } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
+import LaureatCard from '../components/LaureatCard'
+import CardSlider from '../components/CardSlider'
 
 export default function Page() {
   const [drives, setDrives] = useState([])
@@ -81,11 +83,11 @@ export default function Page() {
       <AnimatedSection id="laureats" className="py-20 bg-white" direction="left">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Nos lauréats</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <CardSlider>
             {laureats.map((l, i) => (
               <LaureatCard key={i} {...l} />
             ))}
-          </div>
+          </CardSlider>
         </div>
       </AnimatedSection>
 
@@ -102,18 +104,3 @@ export default function Page() {
   )
   }
 
-function LaureatCard({ name, linkedin }) {
-  return (
-    <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col items-center bg-white text-center">
-      <p className="font-semibold mb-4">{name}</p>
-      <a
-        href={linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-dsccGreen hover:text-dsccOrange text-3xl mt-auto"
-      >
-        <FaLinkedin />
-      </a>
-    </div>
-  )
-}
