@@ -10,8 +10,8 @@ export default function CodeCard({ children }) {
   }
 
   return (
-    <div className="relative bg-lightGray dark:bg-darkText/20 rounded-md p-4 font-mono text-sm overflow-auto">
-      <pre>{children}</pre>
+    <div className="relative bg-lightGray dark:bg-darkText/20 rounded-md p-4 font-mono text-sm overflow-x-auto">
+      <pre className="whitespace-pre">{children}</pre>
       <button
         onClick={handleCopy}
         className="absolute top-2 right-2 text-gray-500 hover:text-dsccOrange"
