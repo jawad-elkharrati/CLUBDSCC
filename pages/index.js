@@ -39,7 +39,8 @@ export default function Home() {
       img: '/cards/introduction%20%C3%A0%20python.png',
       title: 'Introduction à Python',
       tag: 'Session',
-      desc: "Une initiation pratique au langage Python pour bien débuter."
+      desc: "Une initiation pratique au langage Python pour bien débuter.",
+      link: '/python-lessons'
     },
     {
       img: '/cards/mentorship%20fridays.png',
@@ -274,8 +275,8 @@ function Objective({ icon: Icon, title }){
   )
 }
 
-function EventCard({ img, title, tag, desc }){
-  return (
+function EventCard({ img, title, tag, desc, link }){
+  const content = (
     <div
       className="masonry-item bg-white rounded-lg shadow hover:shadow-lg overflow-hidden hover:duration-300"
       whileHover={{ scale: 1.03 }}
@@ -284,7 +285,7 @@ function EventCard({ img, title, tag, desc }){
       viewport={{ once: true }}
       transition={{ type: 'spring', stiffness: 300 }}
     >
-      <Image src={img} alt={title} width={400} height={250} className="w-full h-48 object-contain" />
+      <Image src={img} alt={title} width={400} height={250} className="w-full h-48 object-cover" />
       <div className="p-4 space-y-1">
         <span className="text-xs uppercase tracking-wider text-dsccOrange">{tag}</span>
         <h4 className="text-lg font-semibold">{title}</h4>
@@ -292,6 +293,7 @@ function EventCard({ img, title, tag, desc }){
       </div>
     </div>
   )
+  return link ? <Link href={link}>{content}</Link> : content
 }
 
 
