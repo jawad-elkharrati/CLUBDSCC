@@ -206,10 +206,30 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Équipe actuelle</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 justify-items-center max-w-5xl mx-auto">
-            <TeamCard img="/team/jawad.JPG" name="Jawad Elkharrati" role="Président" />
-            <TeamCard img="/team/aya.jpeg" name="Aya El Farssia" role="Vice‑présidente" />
-            <TeamCard img="/team/hanae.jpg" name="Hanae Cherif" role="Secrétaire" />
-            <TeamCard img="/team/oumaima.jpeg" name="Oumaima Sahli" role="Trésorière" />
+            <TeamCard
+              img="/team/jawad.JPG"
+              name="Jawad Elkharrati"
+              role="Président"
+              link="https://www.linkedin.com/in/jawad-elkharrati/"
+            />
+            <TeamCard
+              img="/team/aya.jpeg"
+              name="Aya El Farssia"
+              role="Vice‑présidente"
+              link="https://ma.linkedin.com/in/aya-el-fassi-3a451b1b9"
+            />
+            <TeamCard
+              img="/team/hanae.jpg"
+              name="Hanae Cherif"
+              role="Secrétaire"
+              link="https://ma.linkedin.com/in/hanae-cherif-31b218344"
+            />
+            <TeamCard
+              img="/team/oumaima.jpeg"
+              name="Oumaima Sahli"
+              role="Trésorière"
+              link="https://ma.linkedin.com/in/sahli-oumaima-b8ab8831b"
+            />
             <TeamCard img="/team/iyad.jpeg" name="Iyad Beddidi" role="Résponsable RH" />
           </div>
           <div className="text-center mt-10">
@@ -275,8 +295,8 @@ function Objective({ icon: Icon, title }){
 
 
 
-function TeamCard({ img, name, role }){
-  return (
+function TeamCard({ img, name, role, link }) {
+  const Card = (
     <motion.div
       className="bg-white dark:bg-darkText text-center shadow-lg rounded-2xl p-6 transition-shadow hover:shadow-xl"
       whileHover={{ scale: 1.05 }}
@@ -291,6 +311,14 @@ function TeamCard({ img, name, role }){
       <h5 className="font-semibold text-lg">{name}</h5>
       <p className="text-sm text-dsccOrange">{role}</p>
     </motion.div>
+  )
+
+  return link ? (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      {Card}
+    </a>
+  ) : (
+    Card
   )
 }
 

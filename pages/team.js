@@ -35,18 +35,27 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Équipe Pilotage</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {pilotageTeam.map(m => (
-              <div key={m.name} className="text-center">
-                <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
-                  <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
-                    {quotesByRole[m.role]}
+            {pilotageTeam.map(m => {
+              const Card = (
+                <div className="text-center">
+                  <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
+                    <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
+                      {quotesByRole[m.role]}
+                    </div>
                   </div>
+                  <p className="font-semibold">{m.name}</p>
+                  <p className="text-sm text-gray-500">{m.role}</p>
                 </div>
-                <p className="font-semibold">{m.name}</p>
-                <p className="text-sm text-gray-500">{m.role}</p>
-              </div>
-            ))}
+              )
+              return m.link ? (
+                <a key={m.name} href={m.link} target="_blank" rel="noopener noreferrer">
+                  {Card}
+                </a>
+              ) : (
+                Card
+              )
+            })}
           </div>
         </div>
       </AnimatedSection>
@@ -56,18 +65,27 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Équipe Responsables</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {responsableTeam.map(m => (
-              <div key={m.name} className="text-center">
-                <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
-                  <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
-                    {quotesByRole[m.role]}
+            {responsableTeam.map(m => {
+              const Card = (
+                <div className="text-center">
+                  <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
+                    <img src={`/team/${m.img}`} alt={m.name} className="object-cover w-full h-full" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-dsccGreen text-white p-2 text-sm transition text-center">
+                      {quotesByRole[m.role]}
+                    </div>
                   </div>
+                  <p className="font-semibold">{m.name}</p>
+                  <p className="text-sm text-gray-500">{m.role}</p>
                 </div>
-                <p className="font-semibold">{m.name}</p>
-                <p className="text-sm text-gray-500">{m.role}</p>
-              </div>
-            ))}
+              )
+              return m.link ? (
+                <a key={m.name} href={m.link} target="_blank" rel="noopener noreferrer">
+                  {Card}
+                </a>
+              ) : (
+                Card
+              )
+            })}
           </div>
         </div>
       </AnimatedSection>
@@ -118,21 +136,60 @@ const quotesByRole = {
 }
 
 const pilotageTeam = [
-  { name: 'Jawad Elkharrati', role: 'Président', img: 'jawad.JPG' },
-  { name: 'Aya El Farssia', role: 'Vice-Présidente', img: 'aya.jpeg' },
-  { name: 'Hanae Cherif', role: 'Secrétaire', img: 'hanae.jpg' },
-  { name: 'Oumaima Sahli', role: 'Trésorière', img: 'oumaima.jpeg' },
+  {
+    name: 'Jawad Elkharrati',
+    role: 'Président',
+    img: 'jawad.JPG',
+    link: 'https://www.linkedin.com/in/jawad-elkharrati/'
+  },
+  {
+    name: 'Aya El Farssia',
+    role: 'Vice-Présidente',
+    img: 'aya.jpeg',
+    link: 'https://ma.linkedin.com/in/aya-el-fassi-3a451b1b9'
+  },
+  {
+    name: 'Hanae Cherif',
+    role: 'Secrétaire',
+    img: 'hanae.jpg',
+    link: 'https://ma.linkedin.com/in/hanae-cherif-31b218344'
+  },
+  {
+    name: 'Oumaima Sahli',
+    role: 'Trésorière',
+    img: 'oumaima.jpeg',
+    link: 'https://ma.linkedin.com/in/sahli-oumaima-b8ab8831b'
+  },
   { name: 'Iyad Beddidi', role: 'Responsable RH', img: 'iyad.jpeg' },
 ]
 
 const responsableTeam = [
-  { name: 'El Wazani Mohamed', role: 'Responsable Design', img: 'jawad.JPG' },
-  { name: 'Houciene Benhaddou', role: 'Responsable Maison de Science', img: 'houcein.jpg' },
-  { name: 'Safae Azizi', role: 'Responsable Média', img: 'safae.jpeg' },
+  {
+    name: 'El Wazani Mohamed',
+    role: 'Responsable Design',
+    img: 'jawad.JPG',
+    link: 'https://ma.linkedin.com/in/mohamed-wazane-827729313'
+  },
+  {
+    name: 'Houciene Benhaddou',
+    role: 'Responsable Maison de Science',
+    img: 'houcein.jpg'
+  },
+  {
+    name: 'Safae Azizi',
+    role: 'Responsable Média',
+    img: 'safae.jpeg',
+    link: 'https://ma.linkedin.com/in/azizi-safae-511326272'
+  },
   { name: 'Jinane Ait Elabd', role: 'Responsable Montage', img: 'jinane.png' },
   { name: 'Mostafa Alaoui', role: 'Responsable Logistique', img: 'mustafa.jpg' },
   { name: 'Amine Chakri', role: 'Responsable Compétition', img: 'amine.jpg' },
-  { name: 'EL MOUSSAOUI Oussama', role: 'Responsable Journée', img: 'oussama.jpg' },
+  {
+    name: 'EL MOUSSAOUI Oussama',
+    role: 'Responsable Journée',
+    img: 'oussama.jpg',
+    link: 'https://ma.linkedin.com/in/el-moussaoui-oussama-0a4a9524b'
+  },
   { name: 'Badreddine Chihab', role: 'Responsable Sponsoring', img: 'badr.jpeg' },
   { name: 'Wafae Zalouk', role: 'Responsable Rédaction', img: 'wafae.jpg' },
   { name: 'Zakaria Taibi', role: 'Responsable Formation', img: 'zakaria.jpg' },
