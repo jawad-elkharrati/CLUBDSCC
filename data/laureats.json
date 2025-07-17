@@ -16,41 +16,40 @@
     "role": "Data Analyst",
     "linkedin": "https://www.linkedin.com/in/mohammed-herrag",
     "img": "/laureat/mohammed.jfif"
-  }
-,
+  },
   {
     "name": "Lamyae Belaouchi",
     "role": "Data Engineer",
     "linkedin": "https://www.linkedin.com/in/lamyae-belaouchi-621603174/",
-    "img": "/laureat/test"
+    "img": "/laureat/lamyae.jfif"
   },
   {
     "name": "Salma BITARI",
     "role": "Data Analyst chez Cour de Justice de l’Union Européenne",
     "linkedin": "https://www.linkedin.com/in/salma-bitari-356aa7203/",
-    "img": "/laureat/test"
+    "img": "/laureat/salma.jfif"
   },
   {
     "name": "Abdelaali LAMRANI",
     "role": "Data Consultant Intern at VISEO",
     "linkedin": "https://www.linkedin.com/in/abdelaali-lamrani/",
-    "img": "/laureat/test"
+    "img": "/laureat/abdelali.jfif"
   },
   {
     "name": "Mohamed Reda Benkacem",
     "role": "Data Science & Cloud Computing Engineer",
     "linkedin": "https://www.linkedin.com/in/benkacem/",
-    "img": "/laureat/test"
+    "img": "/laureat/reda.jfif"
   },
   {
     "name": "Bensafouan Abdelhalim",
     "role": "Data Scientist | Machine Learning Engineer @TEAMNET",
     "linkedin": "https://www.linkedin.com/in/bensafouan-abdelhalim/",
-    "img": "/laureat/test"
+    "img": "/laureat/abdelhalim.jfif"
   },
   {
     "name": "Ahmed AZIZ",
-    "role": "\ud83d\udc0d Data Engineer/Elastic Engineer @BNPParibas",
+    "role": "🐍 Data Engineer/Elastic Engineer @BNPParibas",
     "linkedin": "https://www.linkedin.com/in/reyamed/",
     "img": "/laureat/test"
   },
@@ -58,37 +57,36 @@
     "name": "Hanae Lahbouchi",
     "role": "Data Engineer",
     "linkedin": "https://www.linkedin.com/in/hanae-lahbouchi-51103419a/",
-    "img": "/laureat/test"
-  }
-  ,
+    "img": "/laureat/hanae lahbouchi.jfif"
+  },
   {
     "name": "Kamal Lazhar",
     "role": "Data Engineer at Stellantis",
     "linkedin": "https://www.linkedin.com/in/kamal-lazhar-2414291a6/",
-    "img": "/laureat/test"
+    "img": "/laureat/kamal.jfif"
   },
   {
     "name": "Jouhayna Achargui",
     "role": "Cloud Engineer @Capgemini | DevOps | Azure Certified | GCP Certified",
     "linkedin": "https://www.linkedin.com/in/jouhayna-achargui-b18687202/",
-    "img": "/laureat/test"
+    "img": "/laureat/jouhayna.jfif"
   },
   {
     "name": "Hanifa Elaissaoui",
     "role": "Ingénieur d'état en Data Science et Cloud Computing",
     "linkedin": "https://www.linkedin.com/in/hanifa-elaissaoui-b443b7193/",
-    "img": "/laureat/test"
+    "img": "/laureat/hanifa.jfif"
   },
   {
     "name": "Anouar ASSAKALI",
     "role": "Ingénieur Data Scientist | Ministère de l'Économie et des Finances | Direction Générale des Impôts.",
     "linkedin": "https://www.linkedin.com/in/assakali-anouar/",
-    "img": "/laureat/test"
+    "img": "/laureat/anouar.jfif"
   },
   {
     "name": "Amine Saihi",
     "role": "AI/ML & NLP at Archipel Cognitive",
     "linkedin": "https://www.linkedin.com/in/amine-saihi/",
-    "img": "/laureat/test"
+    "img": "/laureat/amine saihi.jfif"
   }
 ]
