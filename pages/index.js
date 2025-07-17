@@ -1,8 +1,5 @@
-
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Counter from '../components/Counter'
 import Layout from '../components/Layout'
 import Image from 'next/image'
@@ -26,9 +23,6 @@ import { projects } from '../data/projects'
 import { extractKeyword } from '../lib/extractKeyword'
 
 export default function Home() {
-  // Slides displayed in the hero section
-  const slides = ['/1.jpg', '/2.jpg'];
-  const [index, setIndex] = useState(0);
 
   const eventCards = [
     { img: '/cards/data%20for%20impact.png', title: 'Data for Impact' },
@@ -41,46 +35,16 @@ export default function Home() {
     { img: '/cards/voices%20talk.png', title: 'Voices Talk' }
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(i => (i + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
 
   return (
     <Layout title="Accueil">
       
       {/* Hero */}
       <section className="relative w-full h-[110vh] overflow-hidden flex items-center justify-center text-white">
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={slides[index]}
-            className="absolute inset-0 bg-cover bg-center opacity-80 "
-            style={{ backgroundImage: `url(${slides[index]})` }}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 0.8, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 1 }}
-          />
-        </AnimatePresence>
-
-        {slides.length > 1 && (
-          <>
-            <button
-              onClick={() => setIndex(i => (i - 1 + slides.length) % slides.length)}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-dsccGreen rounded-full p-2"
-            >
-              <FaChevronLeft />
-            </button>
-            <button
-              onClick={() => setIndex(i => (i + 1) % slides.length)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-dsccGreen rounded-full p-2"
-            >
-              <FaChevronRight />
-            </button>
-          </>
-        )}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-80"
+          style={{ backgroundImage: 'url(/1.jpg)' }}
+        />
         
         <div className="absolute inset-0 bg-dsccGreen/70" />
 
@@ -124,25 +88,23 @@ export default function Home() {
       <AnimatedSection id="trust" className="py-20 bg-gray-50" direction="right">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-bold text-center mb-8">Ils nous font confiance</h2>
-          <div className="overflow-hidden pb-2">
-            <div className="flex flex-nowrap items-center gap-10 w-max sponsor-scroll">
-              {Array.from({ length: 50 }, (_, i) => {
-                const logos = [
-                  '/sponsors/1631326041576.jfif',
-                  '/sponsors/49-1120_company_import.jpg',
-                  '/sponsors/Assabah-logo.jpg',
-                  '/sponsors/COMMUNE-OUJDA-LOGO-01.png',
-                  '/sponsors/Cerhso.jpg',
-                  '/sponsors/ENSA Oujda.png',
-                  '/sponsors/Screenshot 2025-07-06 204840.png',
-                  '/sponsors/Societe-Generale-Emploi-Recrutement.png',
-                  '/sponsors/images (1).jfif',
-                  '/sponsors/images.png',
-                  '/sponsors/unnamed.png'
-                ]
-                const src = logos[i % logos.length]
-                return <IconTrust key={i} src={src} />
-              })}
+          <div className="overflow-x-auto pb-2 no-scrollbar cursor-grab active:cursor-grabbing">
+            <div className="flex flex-nowrap items-center gap-10 w-max">
+              {[
+                '/sponsors/1631326041576.jfif',
+                '/sponsors/49-1120_company_import.jpg',
+                '/sponsors/Assabah-logo.jpg',
+                '/sponsors/COMMUNE-OUJDA-LOGO-01.png',
+                '/sponsors/Cerhso.jpg',
+                '/sponsors/ENSA Oujda.png',
+                '/sponsors/Screenshot 2025-07-06 204840.png',
+                '/sponsors/Societe-Generale-Emploi-Recrutement.png',
+                '/sponsors/images (1).jfif',
+                '/sponsors/images.png',
+                '/sponsors/unnamed.png'
+              ].map((src, i) => (
+                <IconTrust key={i} src={src} />
+              ))}
             </div>
           </div>
         </div>
