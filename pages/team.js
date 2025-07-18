@@ -191,7 +191,7 @@ const responsableTeam = [
     name: 'Safae Azizi',
     role: 'Responsable Média',
     img: 'safae.jpeg',
-    link: 'https://ma.linkedin.com/in/azizi-safae-511326272'
+    link: 'http://www.linkedin.com/in/azizi-safae-1bb329319'
   },
   { name: 'Jinane Ait Elabd', role: 'Responsable Montage', img: 'jinane.png' },
   { name: 'Mostafa Alaoui', role: 'Responsable Logistique', img: 'mustafa.jpg' },
