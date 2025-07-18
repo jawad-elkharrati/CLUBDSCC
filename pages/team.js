@@ -179,7 +179,7 @@ const responsableTeam = [
   {
     name: 'El Wazani Mohamed',
     role: 'Responsable Design',
-    img: 'jawad.JPG',
+    img: 'wazani.png',
     link: 'https://ma.linkedin.com/in/mohamed-wazane-827729313'
   },
   {
