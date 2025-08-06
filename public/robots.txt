@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://clubdscc.vercel.app/sitemap.xml
