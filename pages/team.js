@@ -205,4 +205,10 @@ const responsableTeam = [
   { name: 'Badreddine Chihab', role: 'Responsable Sponsoring', img: 'badr.jpeg' },
   { name: 'Wafae Zalouk', role: 'Responsable Rédaction', img: 'wafae.jpg' },
   { name: 'Zakaria Taibi', role: 'Responsable Formation', img: 'zakaria.jpg' },
+  {
+    name: 'Zakariae Trachni',
+    role: 'Responsable Formation',
+    img: 'trachni.jpeg',
+    link: 'https://www.linkedin.com/in/zakariaetrachni/'
+  },
 ]
