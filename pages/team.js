@@ -177,7 +177,7 @@ const pilotageTeam = [
 
 const responsableTeam = [
   {
-    name: 'El Wazani Mohamed',
+    name: 'Wazane Mohamed',
     role: 'Responsable Design',
     img: 'wazani.png',
     link: 'https://ma.linkedin.com/in/mohamed-wazane-827729313'
